@@ -130,52 +130,53 @@
 
 # my_func(n1, n2, n3)
 # -------------------4----------------------#
-# print("Введите действительное число-основание и отрицательное целое число-степень ")
-# n1 = float(input(
-#     "число 1="))
-# n2 = int(input(
-#     "число 2="))
+print("Введите действительное число-основание и отрицательное целое число-степень ")
+n1 = float(input(
+    "число 1="))
+n2 = int(input(
+    "число 2="))
 
 
-# def pow_1(a, b):
-#     c = a ** b
-#     print(c)
+def pow_1(a, b):
+    c = a ** b
+    print(c)
 
 
-# def pow_2(a, b):
-#     d = b * -1
-#     e = 0
-#     i = 0
-#     while i < d:
-#         e = a * a
-#         i += 1
-#     c = 1 / e
-#     print(c)
+def pow_2(a, b):
+    d = b * -1
+    e = a
+    i = 1
+    while i < d:
+        e = e * a
+        i += 1
+        print(e)
+    c = 1 / e
+    print(c)
 
 
-# pow_1(n1, n2)
-# pow_2(n1, n2)
+pow_1(n1, n2)
+pow_2(n1, n2)
 # -------------------5----------------------#
 
-def data_sum(args):
-    global total
-    sum = 0
-    i = 0
-    while i < range(len(args)):
-        # for i in args:
-        sum = sum + int(args[i])
-        i += 1
-    total = total + sum
-    print(f"{total} ({sum})")
+# def data_sum(args):
+#     global total
+#     sum = 0
+#     i = 0
+#     while i < (len(args)):
+#         # for i in args:
+#         sum = sum + int(args[i])
+#         i += 1
+#     total = total + sum
+#     print(f"{total} ({sum})")
 
 
-q1 = input("Введите числа через пробел, для завершения нажать q: ").split(' ')
-print(q1)
-condition = True
-total = 0
-while condition == True:
-    q1 = input().split(' ')
-    print(q1)
-    data_sum(q1)
-    if (q1.count(q) != 0):
-        break
+# q1 = input("Введите числа через пробел, для завершения нажать q: ").split(' ')
+# print(q1)
+# condition = True
+# total = 0
+# while condition == True:
+#     q1 = input().split(' ')
+#     print(q1)
+#     data_sum(q1)
+#     if (q1.count(q) != 0):
+#         break
