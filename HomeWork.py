@@ -130,32 +130,32 @@
 
 # my_func(n1, n2, n3)
 # -------------------4----------------------#
-print("Введите действительное число-основание и отрицательное целое число-степень ")
-n1 = float(input(
-    "число 1="))
-n2 = int(input(
-    "число 2="))
+# print("Введите действительное число-основание и отрицательное целое число-степень ")
+# n1 = float(input(
+#     "число 1="))
+# n2 = int(input(
+#     "число 2="))
 
 
-def pow_1(a, b):
-    c = a ** b
-    print(c)
+# def pow_1(a, b):
+#     c = a ** b
+#     print(c)
 
 
-def pow_2(a, b):
-    d = b * -1
-    e = a
-    i = 1
-    while i < d:
-        e = e * a
-        i += 1
-        print(e)
-    c = 1 / e
-    print(c)
+# def pow_2(a, b):
+#     d = b * -1
+#     e = a
+#     i = 1
+#     while i < d:
+#         e = e * a
+#         i += 1
+#         print(e)
+#     c = 1 / e
+#     print(c)
 
 
-pow_1(n1, n2)
-pow_2(n1, n2)
+# pow_1(n1, n2)
+# pow_2(n1, n2)
 # -------------------5----------------------#
 
 # def data_sum(args):
@@ -170,7 +170,7 @@ pow_2(n1, n2)
 #     print(f"{total} ({sum})")
 
 
-# q1 = input("Введите числа через пробел, для завершения нажать q: ").split(' ')
+# q1 = input("Введите числа через пробел, для завершения нажать q: ").split()
 # print(q1)
 # condition = True
 # total = 0
@@ -180,3 +180,16 @@ pow_2(n1, n2)
 #     data_sum(q1)
 #     if (q1.count(q) != 0):
 #         break
+#-----------------Lesson4-------------------#
+# -------------------2----------------------#
+# from random import randint
+# list_1 = [randint(0, 10) for i in range(10)]
+# print(list_1)
+
+# new_list = [list_1[el]
+#             for el in range(1, len(list_1)) if list_1[el] > list_1[el - 1]]
+# print(new_list)
+# -------------------3----------------------#
+new_list = [el
+            for el in range(20, 241) if el % 20 == 0 or el % 21 == 0]
+print(new_list)
