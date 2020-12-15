@@ -190,6 +190,12 @@
 #             for el in range(1, len(list_1)) if list_1[el] > list_1[el - 1]]
 # print(new_list)
 # -------------------3----------------------#
+# new_list = [el
+#             for el in range(20, 241) if el % 20 == 0 or el % 21 == 0]
+# print(new_list)
+# -------------------4----------------------#
+start_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
 new_list = [el
-            for el in range(20, 241) if el % 20 == 0 or el % 21 == 0]
+            for el in start_list if start_list.count(el) == 1]
 print(new_list)
+# -------------------5----------------------#
