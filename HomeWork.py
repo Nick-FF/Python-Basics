@@ -209,3 +209,28 @@
 # new_list = [el for el in range(100, 1001)]
 # print(new_list)
 # print(reduce(sum, new_list))
+# -------------------7----------------------#
+# from math import factorial
+
+
+# def generator(n):
+#     for el in range(1, n+1):
+#         yield factorial(el)
+
+
+# q1 = int(input("Введите целое число: "))
+# for el in generator(q1):
+#     print(el)
+# -------------------7----------------------#
+
+def generator(n):
+    for el in range(1, n + 1):
+        f = 1
+        for i in range(1, el + 1):
+            f = f*i
+        yield f
+
+
+q1 = int(input("Введите целое число: "))
+for el in generator(q1):
+    print(el)
