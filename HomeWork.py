@@ -223,14 +223,58 @@
 #     print(el)
 # -------------------7----------------------#
 
-def generator(n):
-    for el in range(1, n + 1):
-        f = 1
-        for i in range(1, el + 1):
-            f = f*i
-        yield f
+# def generator(n):
+#     for el in range(1, n + 1):
+#         f = 1
+#         for i in range(1, el + 1):
+#             f = f*i
+#         yield f
 
 
-q1 = int(input("Введите целое число: "))
-for el in generator(q1):
-    print(el)
+# q1 = int(input("Введите целое число: "))
+# for el in generator(q1):
+#     print(el)
+#-----------------Lesson5-------------------#
+# -------------------1----------------------#
+# file_name = input("Введите имя текстового файла: ")
+# condition = True
+# try:
+#     f = open(file_name, 'x')
+#     f.close()
+# except Exception:
+#     print("Файл с таким именем уже существует")
+# while condition == True:
+#     try:
+#         q1 = input()
+#         if (q1 == ""):
+#             print("Операция завершена")
+#             break
+#         f = open(file_name, 'a')
+#         print(q1, file=f)
+#         f.close()
+#     except Exception:
+#         print("Что-то пошло не так")
+#     else:
+#         print("Данные записаны")
+#     finally:
+#         f.close()
+# -------------------2----------------------#
+while True:
+    try:
+        file_name = input("Введите имя текстового файла: ")
+        if (file_name == ""):
+            print("Операция завершена")
+            break
+        with open(file_name, "r") as f:
+            i = 1
+            for target_list in f:
+                print(target_list)
+                print(
+                    f'В строке {i} {len(list(target_list.split(" ")))} слова')
+                i += 1
+    except Exception:
+        print("Что-то пошло не так")
+    else:
+        print("Данные считаны")
+    finally:
+        f.close()
