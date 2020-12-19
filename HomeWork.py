@@ -278,31 +278,33 @@
 #         print("Данные считаны")
 #     finally:
 #         f.close()
-# -------------------2----------------------#
-while True:
-    try:
-        file_name = input("Введите имя текстового файла: ")
-        if (file_name == ""):
-            print("Операция завершена")
-            break
-        with open(file_name, "r") as f:
-            # encoding="utf-8" при использовании кодировки выдает ошибку 'utf-8' codec can't decode byte 0xc2 in position 0: invalid continuation byte
-            total_sum = 0.0
-            i = 1
-            for target_list in f:
-                # print(target_list)
-                temp = list(target_list.split(" "))
-                # , "\n" не работает 'str' object cannot be interpreted as an integer
-                # print(f'{temp}')
-                total_sum = total_sum + float(temp[0])
-                i += 1
-                if float(temp[0]) < 20000.0:
-                    print(f'{target_list} оклад менее 20000')
-    except Exception as err:
-        print(err)
-        print("Что-то пошло не так")
-    else:
-        print(f"Средний оклад {total_sum/(i-1)}")
-        print("Данные считаны")
-    finally:
-        f.close()
+# -------------------3----------------------#
+# while True:
+#     try:
+#         file_name = input("Введите имя текстового файла: ")
+#         if (file_name == ""):
+#             print("Операция завершена")
+#             break
+#         with open(file_name, "r") as f:
+#             # encoding="utf-8" при использовании кодировки выдает ошибку 'utf-8' codec can't decode byte 0xc2 in position 0: invalid continuation byte
+#             total_sum = 0.0
+#             i = 1
+#             for target_list in f:
+#                 # print(target_list)
+#                 temp = list(target_list.split(" "))
+#                 # , "\n" не работает 'str' object cannot be interpreted as an integer
+#                 # print(f'{temp}')
+#                 total_sum = total_sum + float(temp[0])
+#                 i += 1
+#                 if float(temp[0]) < 20000.0:
+#                     print(f'{target_list} оклад менее 20000')
+#     except Exception as err:
+#         print(err)
+#         print("Что-то пошло не так")
+#         f.close()
+#     else:
+#         print(f"Средний оклад {total_sum/(i-1)}")
+#         print("Данные считаны")
+#     finally:
+#         f.close()
+# -------------------4----------------------#
