@@ -307,4 +307,22 @@
 #         print("Данные считаны")
 #     finally:
 #         f.close()
-# -------------------4----------------------#
+# -------------------6----------------------#
+#  1 считать файл построчно в список
+#  2 пройти по списку с конца применив isdigit найдя цифры и получить число умножая его на разряд. Далее все числа суммировать.
+#  3 сгенерировать словарь list_1[i]:list_2[j]
+while True:
+    try:
+        file_name = input("Введите имя текстового файла: ")
+        if (file_name == ""):
+        print("Операция завершена")
+        break
+        dic = {}
+        with open(file_name, "r") as f:
+            for target_list in f:
+                temp = list(target_list.split(" "))
+                digit_prep = list(target_list)
+                i = len(digit_prep)
+                while i < 0:
+                    pass
+                dic.append(temp[0]: digit)
