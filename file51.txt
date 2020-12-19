@@ -1,5 +1,1 @@
 & "C:/Program Files/Python39/python.exe" c:/Geek/Python/Repo/Python-Basics/HomeWork.py
-работа с файлами
-здесь была строка
-куда она делась?
-что-то пошло не так
