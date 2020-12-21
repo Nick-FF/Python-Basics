@@ -1,1 +1,1 @@
-& "C:/Program Files/Python39/python.exe" c:/Geek/Python/Repo/Python-Basics/HomeWork.py
+& "C:/Program Files/Python39/python.exe" c:/Geek/Python/Repo/Python-Basics/TrafficLight.py
