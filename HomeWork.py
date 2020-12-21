@@ -223,14 +223,106 @@
 #     print(el)
 # -------------------7----------------------#
 
-def generator(n):
-    for el in range(1, n + 1):
-        f = 1
-        for i in range(1, el + 1):
-            f = f*i
-        yield f
+# def generator(n):
+#     for el in range(1, n + 1):
+#         f = 1
+#         for i in range(1, el + 1):
+#             f = f*i
+#         yield f
 
 
-q1 = int(input("Введите целое число: "))
-for el in generator(q1):
-    print(el)
+# q1 = int(input("Введите целое число: "))
+# for el in generator(q1):
+#     print(el)
+#-----------------Lesson5-------------------#
+# -------------------1----------------------#
+# file_name = input("Введите имя текстового файла: ")
+# condition = True
+# try:
+#     f = open(file_name, 'x')
+#     f.close()
+# except Exception:
+#     print("Файл с таким именем уже существует")
+# while condition == True:
+#     try:
+#         q1 = input()
+#         if (q1 == ""):
+#             print("Операция завершена")
+#             break
+#         f = open(file_name, 'a')
+#         print(q1, file=f)
+#         f.close()
+#     except Exception:
+#         print("Что-то пошло не так")
+#     else:
+#         print("Данные записаны")
+#     finally:
+#         f.close()
+# -------------------2----------------------#
+# while True:
+#     try:
+#         file_name = input("Введите имя текстового файла: ")
+#         if (file_name == ""):
+#             print("Операция завершена")
+#             break
+#         with open(file_name, "r") as f:
+#             i = 1
+#             for target_list in f:
+#                 print(target_list)
+#                 print(
+#                     f'В строке {i} {len(list(target_list.split(" ")))} слова')
+#                 i += 1
+#     except Exception:
+#         print("Что-то пошло не так")
+#     else:
+#         print("Данные считаны")
+#     finally:
+#         f.close()
+# -------------------3----------------------#
+# while True:
+#     try:
+#         file_name = input("Введите имя текстового файла: ")
+#         if (file_name == ""):
+#             print("Операция завершена")
+#             break
+#         with open(file_name, "r") as f:
+#             # encoding="utf-8" при использовании кодировки выдает ошибку 'utf-8' codec can't decode byte 0xc2 in position 0: invalid continuation byte
+#             total_sum = 0.0
+#             i = 1
+#             for target_list in f:
+#                 # print(target_list)
+#                 temp = list(target_list.split(" "))
+#                 # , "\n" не работает 'str' object cannot be interpreted as an integer
+#                 # print(f'{temp}')
+#                 total_sum = total_sum + float(temp[0])
+#                 i += 1
+#                 if float(temp[0]) < 20000.0:
+#                     print(f'{target_list} оклад менее 20000')
+#     except Exception as err:
+#         print(err)
+#         print("Что-то пошло не так")
+#         f.close()
+#     else:
+#         print(f"Средний оклад {total_sum/(i-1)}")
+#         print("Данные считаны")
+#     finally:
+#         f.close()
+# -------------------6----------------------#
+#  1 считать файл построчно в список
+#  2 пройти по списку с конца применив isdigit найдя цифры и получить число умножая его на разряд. Далее все числа суммировать.
+#  3 сгенерировать словарь list_1[i]:list_2[j]
+while True:
+    try:
+        file_name = input("Введите имя текстового файла: ")
+        if (file_name == ""):
+        print("Операция завершена")
+        break
+        dic = {}
+        with open(file_name, "r") as f:
+            for target_list in f:
+                temp = list(target_list.split(" "))
+                digit_prep = list(target_list)
+                i = len(digit_prep)
+                while i < 0:
+                    pass
+                dic.append(temp[0]: digit)
