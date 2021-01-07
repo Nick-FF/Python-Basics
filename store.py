@@ -1,4 +1,6 @@
-from device import Printer, Scaner, Notebook
+from device import Printer
+from device import Scaner
+from device import Notebook
 
 
 class Store:
@@ -16,7 +18,9 @@ class Store:
 
     def get_device(self, rqst):
         if rqst == "1":
-            el.get(10) for el in Store.store_dict.values() if el == Printer().open_dialog
+            print(el.values()
+                  for el in Store.store_dict if el.values()[0] == "Printer")
+
         if rqst == "2":
             Store.store_dict.update(Scaner().open_dialog)
         if rqst == "3":
@@ -24,6 +28,5 @@ class Store:
          # если все вери гуд, то запрашиваем количество
             try:
                 inp_data = int(input("Сколько выдать со склада? "))
-                a.append(inp_data)
-            except ValueError as alarm:
+            except ValueError:
                 print("Fatal error. Введите число!")

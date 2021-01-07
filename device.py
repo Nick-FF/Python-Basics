@@ -9,9 +9,10 @@ class Device:
 
     def dialog_quantity(self, lst):
         while True:
-           try:
+            try:
                 temp = Device().dialog([lst])
-                inp_data = int(temp.values())
+                # inp = temp.get(10)
+                inp_data = int(temp.get(10))
                 return {lst: inp_data}
             except ValueError:
                 print("Fatal error. Введите число!")
@@ -24,7 +25,7 @@ class Printer(Device):
     def open_dialog(self):
         temp = {1: "Printer"}
         temp.update(Device().dialog(self.mask))
-        return temp.update(Device().dialog_quantity([10]))
+        return temp.update(Device().dialog_quantity(10))
 
 
 class Scaner(Device):
