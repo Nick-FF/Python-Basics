@@ -6,3 +6,4 @@ lst = [1, 3, 4, 6, 7]
 # for el in lst:
 #     q1 = input(dict_dialog.get(el))
 f = {el: input(dict_dialog.get(el)) for el in lst}
+el.get(10) for el in dict_dialog.values() if el ==
