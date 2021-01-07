@@ -11,7 +11,6 @@ class Device:
         while True:
             try:
                 temp = Device().dialog([lst])
-                # inp = temp.get(10)
                 inp_data = int(temp.get(10))
                 return {lst: inp_data}
             except ValueError:
@@ -25,7 +24,8 @@ class Printer(Device):
     def open_dialog(self):
         temp = {1: "Printer"}
         temp.update(Device().dialog(self.mask))
-        return temp.update(Device().dialog_quantity(10))
+        temp.update(Device().dialog_quantity(10))
+        return temp
 
 
 class Scaner(Device):

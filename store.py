@@ -9,12 +9,13 @@ class Store:
 
     def add_device(self, dev):
         if dev == "1":
-            Store.store_dict.update(Printer().open_dialog)
+            prom = Store.store_dict.update(Printer().open_dialog)
+            return prom
 
         if dev == "2":
-            Store.store_dict.update(Scaner().open_dialog)
+            return Store.store_dict.update(Scaner().open_dialog)
         if dev == "3":
-            Store.store_dict.update(Notebook().open_dialog)
+            return Store.store_dict.update(Notebook().open_dialog)
 
     def get_device(self, rqst):
         if rqst == "1":
